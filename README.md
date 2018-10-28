@@ -24,7 +24,7 @@ Then I try to input various size. I try to overflow (Yes I know it was silly, bu
 
 Hmm. Something wrong with function malloc_usable_size. Then I learn that malloc_usable_size(void* ptr) in a nutshell just return extracted size which inside metadata of ptr chunk which located in (size_t\*)ptr-1. I checked in my gdb and found that if the string length is less than or equal 8, the buffer will be saved in (char\*)s +16. Otherwise, it will be saved in heap. So, when the buffer saved aside the string length, the length of string saved in metadata. And when I insert string with length less than 8, malloc_usable_size will return a very high value because of overflow(because size which written in heap metadata include the size of its metadata). Wew, just overflow the stack.
 
-Then I construct ROP to invoke system('/bin/sh') but, I get some error. So sad. When I debug it, I found that the error is caused invalid pointer when call free. Sheesh, I must leak heap address to pass it into free which called from object distruction. I change the pointer so that it pointing in bss segment. And.... I make a silly think, Canary Smash, hue hue. 
+Then I construct ROP to invoke system('/bin/sh') but, I get some error. So sad. When I debug it, I found that the error is caused invalid pointer when call free. Sheesh, I must leak heap address to pass it into free which called from object distruction. I change the pointer so that it pointing in bss segment. And.... I make a silly thing, Canary Smash, hue hue. 
 
 Then I start to leak stack address. Something interesting here. When you see the memory layout.
 
