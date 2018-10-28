@@ -27,3 +27,7 @@ Then I start to leak stack address. Something interesting here. When you see the
 So, overflow msg buffer will overwrite pointer to name buffer and with non-static method Profile::show_msg we can leak arbitrary address. I just need to brute last 2 bytes address of name buffer to leak the position of Profile object, and the canary. And after I leak the Profile object I can leak the GOT and got the libc address. After that, I make ROPchain and get shell. Very nice problem. 
 
 NB: Thanks to [Mamad](https://github.com/M46F) for suggestion to use vi. It's very nice for scripting using vi. Thanks to [Rey](https://github.com/rwhendry) for the patient. Actually I have to do something with Rey but, I am very excited with this problem so I leave him. Sorry :P.
+
+NB(again): I upsolve this problem because I just finished mid semester and I think my score will be ...(emm) and need refreshing by swimming with my friends and leave this contest and enter this contest again when the contest was over :P
+
+sorry for bad english :P
