@@ -37,3 +37,5 @@ NB: Thanks to [Mamad](https://github.com/M46F) for suggestion to use vi. It's ve
 NB(again): I upsolve this problem because I just finished mid semester and I think my score will be ...(emm) and need refreshing by swimming with my friend and leave this contest and enter this contest again when the contest was over :P
 
 sorry for bad english :P
+
+flag: SECCON{57r1ng_l0c4710n_15_n07_0nly_h34p}
