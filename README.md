@@ -8,7 +8,7 @@ libc: https://github.com/FwP-IDN/writeup-ctf-seccon2018-online-profile/blob/mast
 
 solver: https://github.com/FwP-IDN/writeup-ctf-seccon2018-online-profile/blob/master/script1.py
 
-tag : C++, ROP, string storage, buffer overflow, memory leak, bruteforce, integer overflow.
+tag : C++, ROP, string storage, buffer overflow, stack address leak, bruteforce, integer overflow.
 
 my notes : I am very love this problem. From this problem I learn about structure of class in C++, C++ string, and ELF which created from C++. Thanks :). I write this writeup happily
 
